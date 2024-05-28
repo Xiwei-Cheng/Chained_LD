@@ -1,0 +1,33 @@
+training:
+  batch_size: 128
+  n_epochs: 500000
+  n_iters: 200001
+  ngpu: 1
+  snapshot_freq: 20000
+  algo: 'dsm'
+  anneal_power: 2.0
+
+data:
+  flip_p: 0.5
+  dataset: "MNIST"
+#  dataset: "FashionMNIST"
+  image_size: 28
+  channels: 1
+  logit_transform: false
+  random_flip: false
+
+model:
+  sigma_begin: 1
+  sigma_end: 0.01
+  num_classes: 10
+  batch_norm: false
+  hidden_dim: 1024
+  layer_dim: 2
+  patch: 14
+
+optim:
+  weight_decay: 0.000
+  optimizer: "Adam"
+  lr: 0.001
+  beta1: 0.9
+  amsgrad: false
